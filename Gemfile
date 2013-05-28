@@ -4,8 +4,6 @@ gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
-gem "pg", "~> 0.15.1"
-gem "sqlite3", "~> 1.3.7"
 
 group :production do
 	gem 'pg'
