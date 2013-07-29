@@ -1,21 +1,10 @@
-<div class="box">
-	<%= donor %>
-
-	<p class="Familyname">
-		<%= donor.familyname %>
-	</p>
-	<% @donors.each do |donor| %>
-  <tr>
+    <tr>
     <td><%= donor.familyname %></td>
     <td><%= donor.status %></td>
     <td><%= donor.amount %></td>
     <td><%= donor.school %></td>
-</tr>
-	</p>
 	<% if current_user == donor.user %>
-		<p>
-		  <%= link_to 'Edit', edit_pin_path(donor) %>
-		  <%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %>
-		</p>
-	<% end %>
-</div>
+	  <td>  <%= link_to 'Edit', edit_donor_path(donor) %></td>
+	  <td>  <%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  <%end%>
+	  </tr>

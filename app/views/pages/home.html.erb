@@ -1,14 +1,14 @@
 <% if user_signed_in? %>
-	<h1>You're logged in! </h1>
+	<h5>Welcome to the MEF 2013-14 Tracking system </h5>
+	<p>
+	<%= link_to 'Your Families', donors_path(@index), class: "btn btn-primary btn-small"%>
+	</p>
 <%else%>
 	<div class="hero-unit">
-		<h1> Welcome to our MEF Test App!</h1>
+		<h3> Welcome to our MEF Test App!</h3>
 		<p>
 		You've found the test page for the MEF app
      </p>
 
-   	<p>
-            <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
-        </p>
 	</div>
 <%end%>
