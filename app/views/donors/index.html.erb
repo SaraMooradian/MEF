@@ -5,6 +5,8 @@
     <th>Familyname</th>
     <th>Status</th>
     <th>Amount</th>
+    <th>School</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +17,7 @@
     <td><%= donor.familyname %></td>
     <td><%= donor.status %></td>
     <td><%= donor.amount %></td>
+    <td><%= donor.school %></td>
     <td><%= link_to 'Show', donor %></td>
     <td><%= link_to 'Edit', edit_donor_path(donor) %></td>
     <td><%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
