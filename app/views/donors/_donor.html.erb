@@ -1,0 +1,18 @@
+<div class="box">
+	<%= pin %>
+
+	<p class="Familyname">
+		<%= donor.familyname %>
+	</p>
+	<p>
+		<strong>
+			Posted by <%= link_to donor.user.name, donor.user %>
+		</strong>
+	</p>
+	<% if current_user == donor.user %>
+		<p>
+		  <%= link_to 'Edit', edit_pin_path(donor) %>
+		  <%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %>
+		</p>
+	<% end %>
+</div>
