@@ -1,5 +1,5 @@
 class DonorsController < ApplicationController
- before_filter :authenticate_user!, except: [:index]
+ before_filter :authenticate_user!
   # GET /donors
   # GET /donors.json
   def index

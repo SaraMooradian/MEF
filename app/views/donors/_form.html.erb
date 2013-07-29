@@ -1,14 +1,12 @@
-<%= simple_form_for(@donor) do |f| %>
+<%= simple_form_for(@donor, html: { class: "form horizontal"}) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
     <%= f.input :familyname %>
     <%= f.input :status %>
     <%= f.input :amount %>
     <%= f.input :school %>
-  </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary"%>
   </div>
 <% end %>

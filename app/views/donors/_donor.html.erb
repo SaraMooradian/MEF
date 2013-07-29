@@ -1,13 +1,16 @@
 <div class="box">
-	<%= pin %>
+	<%= donor %>
 
 	<p class="Familyname">
 		<%= donor.familyname %>
 	</p>
-	<p>
-		<strong>
-			Posted by <%= link_to donor.user.name, donor.user %>
-		</strong>
+	<% @donors.each do |donor| %>
+  <tr>
+    <td><%= donor.familyname %></td>
+    <td><%= donor.status %></td>
+    <td><%= donor.amount %></td>
+    <td><%= donor.school %></td>
+</tr>
 	</p>
 	<% if current_user == donor.user %>
 		<p>

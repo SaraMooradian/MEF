@@ -1,7 +1,8 @@
 
 <h1>Listing donors</h1>
 <table class="table table-hover">
-  <tbody>
+  <thead>
+  <tr>
     <th>Family Name</th>
     <th>Status</th>
     <th>Amount</th>
@@ -10,18 +11,11 @@
     <th></th>
     <th></th>
     <th></th>
-
-<% @donors.each do |donor| %>
-  <tr>
-    <td><%= donor.familyname %></td>
-    <td><%= donor.status %></td>
-    <td><%= donor.amount %></td>
-    <td><%= donor.school %></td>
-    <td><%= link_to 'Show', donor %></td>
-    <td><%= link_to 'Edit', edit_donor_path(donor) %></td>
-    <td><%= link_to 'Destroy', donor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </thead>
+<tbody>
+  <%= render @donors %>
   </tbody>
-<% end %>
 </table>
 
 <br />
