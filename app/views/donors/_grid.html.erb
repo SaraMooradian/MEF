@@ -1,0 +1,28 @@
+<%# show_filters: :when_filtered %>
+<%= grid(@donors_grid) do |g|
+
+  g.column name:  'ID', attribute: 'userid' do |donor|
+    donor.id
+  end
+
+  g.column name:  'Family Name', attribute: 'familyname'  do |donor|
+    donor.familyname
+  end
+
+  g.column  name:  'Status', attribute: 'status' do |donor|
+    donor.status
+  end
+
+  g.column  name:  'Amount', attribute: 'amount' do |donor|
+    donor.amount
+  end
+
+  g.column name:  'School', attribute: 'school' do |donor|
+    donor.due_date
+  end
+
+
+  g.column   do |donor|
+    link_to('Edit', edit_donor_path(task))
+  end
+end -%>

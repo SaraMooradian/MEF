@@ -1,10 +1,13 @@
 class DonorsController < ApplicationController
  before_filter :authenticate_user!
+ helper_method :sort_column, :sort_direction
   # GET /donors
   # GET /donors.json
   def index
-    @donors = Donor.all
-
+    @donors = Donor.order(sort_column + " " + sort_direction)
+  #@donors_grid = initialize_grid(Donor)
+#end
+#end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @donors }
@@ -81,4 +84,11 @@ class DonorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  private
+  def sort_column
+    Donor.column_names.include?(params[:sort]) ? params[:sort]: "familyname"
+  end
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+end
 end

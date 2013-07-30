@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-2.0.3.min.js
+//= require wice_grid
 //= require bootstrap
 //= require_tree .

@@ -67,3 +67,17 @@ div {
     list-style: square;
   }
 }
+
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/1uparrow.png);
+}
+
+.pretty th .desc {
+  background-image: url(/images/arrow_down_double.png);
+}
